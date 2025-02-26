@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        h1 {
+            font-size: 60px;
+            font-family: 'Roboto';
+            text-align: center;
+            color: hsl(237, 41%, 29%);
+        }
+        #banner {
+            width: 100%;
+            height: 300px;
+        }
+        h2 {
+            font-family: 'Roboto';
+            text-align: center;
+            color: hsl(237, 41%, 29%);
+        }
+        p {
+            font-family: 'Roboto';
+            
+        }
+        #container {
+            max-width: 720px;
+            margin-left: 0 auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id = "container">
+        <h1>SowmyaGovula</h1>
+        <img class="img-fluid" id ="banner" src="http://127.0.0.1:8080/static/Do.png" height="320">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at 
+            dolor tincidunt tortor suscipit imperdiet. Fusce eu fringilla mauris, 
+            eu vestibulum quam. Fusce eget luctus sapien. Sed ullamcorper diam eu         
+            sapien maximus hendrerit. Fusce quis nunc molestie, convallis nisi vel, 
+            malesuada leo. Morbi in sem malesuada, laoreet lacus et, sagittis arcu. 
+            Proin iaculis sit amet ligula a tempus. Aenean molestie, erat a iaculis 
+            venenatis, ex enim pretium dui, at vestibulum lectus libero ac mauris. 
+            Duis volutpat quam vel nisi facilisis laoreet. Sed vestibulum, augue non 
+            porta pellentesque, tellus dolor porttitor justo, eget vulputate massa 
+            leo vitae ante. Sed quis vehicula leo, ut sodales odio.</p>
+        <h2>Links</h2>
+        <p>
+            {{jobs}}
+        </p>
+        <h4 class="lead text-center">linkedIn</h4>
+        <div style="text-align: center;">
+            <button class="btn btn-dark">Click to See LinkedIn Portfolio</button>
+        </div>
+    </div>
+</body>
+</html>
