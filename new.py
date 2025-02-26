@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -6,25 +6,25 @@ JOBs = [
     {
         'id' : 1,
         'Position' : "Software Engineer",
-        'Location' : "Bengaluru, Hyderabad",
+        'Location' : " Bengaluru, Hyderabad",
         'Salary' : 'Rs. 12,00,000'
     },
     {
         'id' : 2,
         'Position' : "Data Scientist",
-        'Location' : "Hyderabad",
+        'Location' : " Hyderabad",
         'Salary' : 'Rs. 18,00,000'
     },
     {
         'id' : 3,
         'Position' : "Python Developer",
-        'Location' : "Bengaluru, Hyderabad",
+        'Location' : " Bengaluru, Hyderabad",
         'Salary' : 'Rs. 12,00,000'
     },
     {
         'id' : 4,
         'Position' : "Fullstack Developer",
-        'Location' : "Bengaluru, Chennai, Hyderabad",
+        'Location' : " Bengaluru, Chennai, Hyderabad",
         'Salary' : 'Rs. 20,00,000'
     }]
 
@@ -32,6 +32,10 @@ JOBs = [
 def home():
     return render_template("hpme.html", 
                            jobs=JOBs)
+
+@app.route("/jobs")
+def list_jobs():
+    return jsonify(JOBs)
 
 if __name__ == "__main__":
     app.run(port = 8080, debug = True)

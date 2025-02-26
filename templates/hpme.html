@@ -48,9 +48,11 @@
             porta pellentesque, tellus dolor porttitor justo, eget vulputate massa 
             leo vitae ante. Sed quis vehicula leo, ut sodales odio.</p>
         <h2>Links</h2>
-        <p>
-            {{jobs}}
-        </p>
+        <div>
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}
+            {% endfor %}  
+        </div>
         <h4 class="lead text-center">linkedIn</h4>
         <div style="text-align: center;">
             <button class="btn btn-dark">Click to See LinkedIn Portfolio</button>
